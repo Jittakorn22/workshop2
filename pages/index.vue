@@ -1,7 +1,9 @@
 <template>
-  <div>Static Page</div>
+  <div>{{ $t('images') }}</div>
 </template>
 
 <script setup>
-const { data: count } = await useFetch('/api/count');
+useSEO({
+  title: 'Home',
+});
 </script>
