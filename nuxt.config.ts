@@ -1,10 +1,64 @@
+const env = process.env;
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  runtimeConfig: {
-    apiBaseUrl: process.env.API_BASE_URL || 'http://localhost:3000',
+  app: {
+    head: {
+      title: 'Home',
+      titleTemplate: `%s - ${env.META_TITLE}`,
+
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: env.META_DESCRIPTION,
+        },
+        { hid: 'keywords', name: 'keywords', content: env.META_KEYWORDS },
+
+        { hid: 'og:title', property: 'og:title', content: env.META_TITLE },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: env.META_DESCRIPTION,
+        },
+        { hid: 'og:image', property: 'og:image', content: '/og-image.jpg' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: env.META_TITLE,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: env.META_DESCRIPTION,
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: '/og-image.jpg',
+        },
+      ],
+
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    },
   },
 
-  modules: ['@nuxt/image-edge', '@nuxtjs/i18n'],
+  modules: ['@nuxt/image-edge', '@nuxtjs/i18n', '@sidebase/nuxt-auth'],
+
+  css: ['~/assets/css/main.css'],
+
+  auth: {
+    origin: 'http://localhost:3000',
+    basePath: '/api/v1/auth/login',
+  },
 
   postcss: {
     plugins: {
@@ -27,6 +81,7 @@ export default defineNuxtConfig({
     },
   },
 
+  // @nuxtjs/i18n: https://v8.i18n.nuxtjs.org/
   i18n: {
     locales: [
       {
@@ -64,5 +119,9 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  runtimeConfig: {
+    apiBaseUrl: process.env.API_BASE_URL || 'http://localhost:3000',
   },
 });
