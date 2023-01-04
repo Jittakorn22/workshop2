@@ -19,7 +19,7 @@ useSEO({
   title: 'Login',
 });
 
-const { signIn } = useSession();
+// const { signIn } = useSession();
 
 const onSubmit = (e: { target: HTMLFormElement | undefined }) => {
   const data = new FormData(e.target);
