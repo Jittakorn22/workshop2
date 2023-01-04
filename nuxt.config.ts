@@ -51,14 +51,9 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/image-edge', '@nuxtjs/i18n', '@sidebase/nuxt-auth'],
+  modules: ['@nuxt/image-edge', '@nuxtjs/i18n'],
 
   css: ['~/assets/css/main.css'],
-
-  auth: {
-    origin: 'http://localhost:3000',
-    basePath: '/api/v1/auth/login',
-  },
 
   postcss: {
     plugins: {
