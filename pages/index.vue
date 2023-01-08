@@ -1,5 +1,7 @@
 <template>
-  <div>{{ $t('images') }}</div>
+  <div>
+    {{ $t('images') }}
+  </div>
 </template>
 
 <script setup>

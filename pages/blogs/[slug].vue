@@ -16,7 +16,7 @@
         {{ blog.createdBy + ' - ' + formatMonthDayYear(blog.createdAt) }}
         ({{ blog.readTime }} mins read)
       </i>
-      <p v-html="blog.content"></p>
+      <p v-dompurify-html="blog.content"></p>
     </div>
     <Error404 v-else />
   </div>

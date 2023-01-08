@@ -18,7 +18,7 @@
         }}
         mins read)
       </i>
-      <p v-html="page.content"></p>
+      <p v-dompurify-html="page.content"></p>
     </div>
     <Error404 v-else />
   </div>

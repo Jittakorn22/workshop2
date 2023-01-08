@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["autoprefixer", "nuxt", "nuxtjs", "postcss", "tailwindcss"]
+  "cSpell.words": [
+    "autoprefixer",
+    "dompurify",
+    "nuxt",
+    "nuxtjs",
+    "postcss",
+    "tailwindcss"
+  ]
 }
