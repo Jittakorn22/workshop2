@@ -1,12 +1,20 @@
 <template>
   <div>
     <div v-if="blog">
-      <img v-if="blog.banner" :src="blog.banner" :alt="`${blog.title} Banner`" />
-      <img v-if="blog.thumbnail" :src="blog.thumbnail" :alt="`${blog.title} Thumbnail`" />
+      <img
+        v-if="blog.banner"
+        :src="blog.banner"
+        :alt="`${blog.title} Banner`"
+      />
+      <img
+        v-if="blog.thumbnail"
+        :src="blog.thumbnail"
+        :alt="`${blog.title} Thumbnail`"
+      />
       <h1>{{ blog.title }}</h1>
       <i v-if="blog.createdBy || blog.createdAt">
-        {{ blog.createdBy + ' - ' + formatMonthDayYear(blog.createdAt) }} ({{ blog.readTime }} mins
-        read)
+        {{ blog.createdBy + ' - ' + formatMonthDayYear(blog.createdAt) }}
+        ({{ blog.readTime }} mins read)
       </i>
       <p v-html="blog.content"></p>
     </div>

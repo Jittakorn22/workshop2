@@ -26,7 +26,7 @@ export const useSEO = (obj: {
     author?: any;
   };
 }) => {
-  let seo = {
+  const seo = {
     title: obj.title,
     meta: [
       {
@@ -77,11 +77,13 @@ export const useSEO = (obj: {
       },
       {
         property: 'twitter:description',
-        content: obj.twitter?.description || obj.og?.description || obj.description,
+        content:
+          obj.twitter?.description || obj.og?.description || obj.description,
       },
       {
         property: 'twitter:image',
-        content: obj.twitter?.image || obj.og?.image || obj.image || '/og-image.jpg',
+        content:
+          obj.twitter?.image || obj.og?.image || obj.image || '/og-image.jpg',
       },
       {
         property: 'twitter:card',

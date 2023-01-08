@@ -1,8 +1,10 @@
-node_modules
-*.log*
-.nuxt
-.nitro
-.cache
-.output
+/node_modules
+/.nuxt
+/.nitro
+/.cache
+/.output
+/dist
+/node-jiti
+
 .env
-dist
+*.log*

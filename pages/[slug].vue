@@ -1,12 +1,22 @@
 <template>
   <div>
     <div v-if="page">
-      <img v-if="page.banner" :src="page.banner" :alt="`${page.title} Banner`" />
-      <img v-if="page.thumbnail" :src="page.thumbnail" :alt="`${page.title} Thumbnail`" />
+      <img
+        v-if="page.banner"
+        :src="page.banner"
+        :alt="`${page.title} Banner`"
+      />
+      <img
+        v-if="page.thumbnail"
+        :src="page.thumbnail"
+        :alt="`${page.title} Thumbnail`"
+      />
       <h1>{{ page.title }}</h1>
       <i v-if="page.createdBy || page.createdAt">
-        {{ page.createdBy + ' - ' + formatMonthDayYear(page.createdAt) }} ({{ page.readTime }} mins
-        read)
+        {{ page.createdBy + ' - ' + formatMonthDayYear(page.createdAt) }} ({{
+          page.readTime
+        }}
+        mins read)
       </i>
       <p v-html="page.content"></p>
     </div>

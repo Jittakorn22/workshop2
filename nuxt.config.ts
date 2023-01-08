@@ -81,11 +81,11 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'en',
-        file: 'en.json',
+        file: 'en_US.json',
       },
       {
         code: 'th',
-        file: 'th.json',
+        file: 'th_TH.json',
       },
     ],
 

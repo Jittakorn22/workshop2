@@ -1,9 +1,13 @@
 <template>
   <div>
     <Card>
-      <form action="#" @submit.prevent="onSubmit" class="grid grid-cols-1 gap-4">
-        <input type="email" name="email" id="email" />
-        <input type="password" name="password" id="password" />
+      <form
+        action="#"
+        class="grid grid-cols-1 gap-4"
+        @submit.prevent="onSubmit"
+      >
+        <input id="email" type="email" name="email" />
+        <input id="password" type="password" name="password" />
         <button>{{ $t('login') }}</button>
       </form>
     </Card>
