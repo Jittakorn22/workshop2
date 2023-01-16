@@ -2,9 +2,13 @@
   "cSpell.words": [
     "autoprefixer",
     "dompurify",
+    "hexrgba",
     "nuxt",
     "nuxtjs",
     "postcss",
     "tailwindcss"
-  ]
+  ],
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  }
 }

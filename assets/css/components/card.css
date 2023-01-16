@@ -1,0 +1,7 @@
+.custom-card {
+  background-color: black;
+
+  &__title {
+    color: white;
+  }
+}

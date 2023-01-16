@@ -53,10 +53,14 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/image-edge', '@nuxtjs/i18n'],
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/tailwind.css', '~/assets/css/main.css'],
 
   postcss: {
     plugins: {
+      'postcss-import': {},
+      'postcss-nested': {},
+      'postcss-hexrgba': {},
+
       tailwindcss: {},
       autoprefixer: {},
     },
