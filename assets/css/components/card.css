@@ -1,7 +1,45 @@
-.custom-card {
-  background-color: black;
+.card {
+  display: flex;
+  width: 381px;
+  height: 527px;
+  gap: 18px;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+  &:hover {
+    &:after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 22px);
+      height: calc(100% - 175px);
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid white;
+      border-redius: 8px;
+      transition: opacity 0.01s;
+      z-index: 10;
+    }
+  }
 
-  &__title {
-    color: white;
+  &__img {
+    position: absolute;
+    width: 381px;
+    height: 374px;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+  }
+
+  &__content {
+    position: absolute;
+    align-items: center;
+    gap: 11px;
+    padding: 5px 15px;
+    width: 381px;
+    height: 135px;
+    left: 0px;
+    bottom: 0px;
+    background: black;
   }
 }

@@ -1,0 +1,11 @@
+.title {
+  width: 225px;
+  height: 58px;
+
+  align_items: center;
+}
+.arrow {
+  position: absolute;
+  width: 170px;
+  right: 10px;
+}

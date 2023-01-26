@@ -1,1 +1,12 @@
 @import './components/card.css';
+@import './components/text.css';
+@import './layout/base.css';
+@import './components/category.css';
+@import './layout/block.css';
+@import './components/container.css';
+@import './components/arrow.css';
+@import './components/button.css';
+@import './base/reset.css';
+@import 'swiper/less';
+@import 'swiper/less/navigation';
+@import 'swiper/less/pagination';

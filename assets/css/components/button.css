@@ -1,0 +1,14 @@
+.swiper-button-next {
+    color: white !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  .swiper-button-prev {
+    color: white !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+    border: 2px solid white;
+  }

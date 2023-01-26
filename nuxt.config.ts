@@ -1,6 +1,5 @@
 const env = process.env;
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     head: {
@@ -51,8 +50,8 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/image-edge', '@nuxtjs/i18n'],
-
+  modules: ['@nuxt/image-edge', '@nuxtjs/i18n', 'nuxt-swiper'],
+  swiper: {},
   css: ['~/assets/css/tailwind.css', '~/assets/css/main.css'],
 
   postcss: {
